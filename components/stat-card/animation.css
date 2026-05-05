@@ -1,0 +1,22 @@
+
+:root {
+    --ease-custom: cubic-bezier(0.052, 0.756, 0.032, 0.967);
+}
+
+
+@property --integer-num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.integer-number-animation {
+    --integer-num: 0;
+    counter-reset: num var(--integer-num);
+    transition: --integer-num 3s var(--ease-custom);
+
+    &::before {
+      content: counter(num);
+    }
+}
+

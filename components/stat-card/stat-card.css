@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colors */
+  --orange-color: #E07A5F;
+
+  /* Fonts */
+  --font-heading: "Inter", sans-serif;
+  --font-text: "Plus Jakarta Sans", sans-serif;
+}
+
+ul[role="list"] {
+  list-style: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+}
+
+/****** DESKTOP ******/
+
+.stat-card-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    max-width: 320px;
+    width: 100%;
+    gap: 10px;
+    
+    .number {
+      font-family: var(--font-heading);
+      font-size: clamp(48px, 29.6727px + 4.3636vw, 96px); /* @link https://utopia.fyi/clamp/calculator?a=420,1520,48—96 */
+      font-weight: 700;
+    }
+    
+    p {
+      font-family: var(--font-text);
+      font-size: clamp(20px, 18.4727px + 0.3636vw, 24px);
+      font-weight: 400;
+      text-wrap: balance;
+      word-wrap: break-word;
+    } 
+
+    &:not(:last-child) {
+      border-right: 3px solid var(--orange-color);
+      border-radius: 1px;
+
+      @media (max-width: 768px) {
+        border-right: none;
+        border-bottom: 3px solid var(--orange-color);
+      }
+    }
+  }
+}
