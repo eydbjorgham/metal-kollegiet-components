@@ -7,10 +7,19 @@
 :root {
   /* Colors */
   --orange-color: #E07A5F;
+  --blue-color: #00AACF;
+  --blue-hover-color: #00708A;
+  --white-color: #FFFFFF;
 
   /* Fonts */
   --font-heading: "Inter", sans-serif;
   --font-text: "Plus Jakarta Sans", sans-serif;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
 }
 
 ul[role="list"] {
@@ -28,3 +37,44 @@ ul[role="list"] {
 }
 
 /****** DESKTOP ******/
+
+.c-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  img {
+    max-width: 95px;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      max-width: 35px;
+    }
+  }
+
+  ul {
+    display: flex;
+    gap: 2rem;
+
+    button {
+      background-color: var(--blue-color);
+      mask-image: url('./icons/button.svg');
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      padding: 0.75rem 2.5rem;
+      border: none;
+      cursor: pointer;
+      color: var(--white-color);
+      font-size: 20px;
+      font-family: var(--font-heading);
+      font-weight: var(--font-weight-medium);
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        background-color: var(--blue-hover-color);
+      }
+    }
+  }
+}
