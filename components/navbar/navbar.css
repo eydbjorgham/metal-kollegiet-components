@@ -45,7 +45,7 @@ ul[role="list"] {
   padding: 1rem 2rem;
 
   img {
-    max-width: 95px;
+    max-width: 350px;
     width: 100%;
 
     @media (max-width: 768px) {
@@ -63,11 +63,11 @@ ul[role="list"] {
       mask-size: contain;
       mask-repeat: no-repeat;
       mask-position: center;
-      padding: 0.75rem 2.5rem;
+      padding: 1rem;
       border: none;
       cursor: pointer;
       color: var(--white-color);
-      font-size: 20px;
+      font-size: 18px;
       font-family: var(--font-heading);
       font-weight: var(--font-weight-medium);
       transition: 0.2s ease-in-out;
